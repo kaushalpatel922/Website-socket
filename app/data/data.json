@@ -1,0 +1,12 @@
+{
+  "speakers": [{
+      "title": "Ask Me Anything",
+      "name": "Michelle Peavy",
+      "summary": "Linkedin Expert"
+    },
+    {
+      "title": "Talk about your business!",
+      "name": "Karen Miller",
+      "summary": "Instructional Designer"
+    }]
+}

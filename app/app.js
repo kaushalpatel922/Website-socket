@@ -1,13 +1,13 @@
-var http = require('http');
+var express = require('express');
+var app = express();
+var dataFile = require('./data/data.json');
 
-var myServer = http.createServer(function(request, response) {
-  //When response needs to write head for Request 200.
-  response.writeHead(200, {"Content-Type" : "text/html"});
-  //Writing to the client
-  response.write('<h1>Virtual Conferences</h1>');
-  //Done with all the responses
-  response.end();
+app.set('port', process.env.PORT || 3000);
+
+app.get('/', function(request, response) {
+  response.send('<h1>Virtual Conferences</h1>');
 });
 
-myServer.listen(3000);
-console.log('Go to localhost:3000 on browser');
+var server = app.listen(app.get('port'), function() {
+  console.log('listening to port '+ app.get('port'));
+});
