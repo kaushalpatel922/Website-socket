@@ -1,12 +1,17 @@
 {
   "speakers": [{
-      "title": "Ask Me Anything",
-      "name": "Michelle Peavy",
-      "summary": "Linkedin Expert"
+      "title": "OMG Streams",
+      "name": "Pam Selle",
+      "summary": "There’s a data structure that essentially makes you a wizard and that data structure is streams. In this talk, you’ll learn more about the best data structure you didn’t know enough about and how to leverage its power in JavaScript. Expect to learn about IO streams, generators, and the latest developments in the awesome awesomeness that is streams."
     },
     {
-      "title": "Talk about your business!",
-      "name": "Karen Miller",
-      "summary": "Instructional Designer"
+      "title": "The toxic side of free. Or: how I lost the love for my side project",
+      "name": "Remy Sharp",
+      "summary": "This is a 5 part story about (my side project and attempted full time project in 2014) 'JS Bin' and the abuse that it's suffered over the last 7 years of being an open project. The stories include tales of spam, abuse from registered users and the impact on personal life, dealing with the process of taking money, and the pain (oh...the pain) and finally police involvement (from a casual planned DDoS, child pornography and terrorism). In each section, I've tried to end on a positive note (but it's not terribly technical) even though the actual content is fairly negative and dark at times. It's an extremely personal story, but there's way too much 'hey, my project is awesome, who want's a high-five?!' - this is very much the antidote!"
+    },
+    {
+      "title": "Building BoroJS",
+      "name": "Jed Schmidt",
+      "summary": "This week may mark JSConf's last call, but the local communities it inspired are just getting started. In this talk, Jed will share lessons learned from joining New York's JavaScripters to create BoroJS, one of tech's most vibrant local communities."
     }]
 }
