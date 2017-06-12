@@ -1,0 +1,14 @@
+{
+  "name": "Node and express",
+  "version": "1.0.0",
+  "description": "A Website with Node & ExpressJS",
+  "main": "app/app.js",
+  "scripts": {
+    "start": "node app/app.js"
+  },
+  "author": "Kaushal Patel",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
