@@ -6,6 +6,7 @@ app.set('port', process.env.PORT || 3000);
 //setting the variable to available through entire app
 app.set('appData', dataFile);
 
+app.use(express.static('app/public'));
 app.use(require('./routes/index'));
 app.use(require('./routes/speakers'));
 

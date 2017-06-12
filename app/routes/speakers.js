@@ -9,12 +9,14 @@ router.get('/speakers', function(request, response) {
   dataFile.speakers.forEach(function(item) {
     info += `
     <li>
-      ${item.name}
+      <h2>${item.name}</h2>
+      <img src="/images/speakers/${item.shortname}.png" alt="speaker">
       <p>${item.summary}</p>
     </li>
     `;
   });
   response.send(`
+    <link rel="stylesheet" type="text/css" href="css/style.css">
     <h1>JS Conferences</h1>
     ${info}
   `);
