@@ -216,8 +216,9 @@ header .navbar-inverse .navbar-nav>li>a {
   display: block;
   padding: 5px;
   float: left;
-  width: 33.33%;
-  border-radius: 10px;
+  width: 45%;
+  border-radius: 5px;
+
 }
 
 @media (min-width: 500px) and (max-width: 768px) {
