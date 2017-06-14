@@ -4,89 +4,17 @@
     <% include partials/template/head.ejs %>
   </head>
   <body id="<%= pageID %>">
-
-    <header>
-      <div class="jumbotron hidden-xs">
-      </div>
-
-      <nav class="navbar navbar-inverse">
-        <div class="container">
-          <div class="navbar-header">
-
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-
-            <a href="/" class="navbar-brand">JS Conferences</a>
-          </div>
-          <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-              <li><a href="/">Home</a></li>
-                <li><a href="/speakers" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Speakers <span class="caret"></span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="/speakers">All Speakers</a></li>
-                    <li role="separator" class="divider"></li>
-                  </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
-
+    <% include partials/template/header.ejs %>
     <div class="container">
       <div class="row">
         <div class="col-sm-8">
-          <div class="maincontent">
-
-            <article class="article">
-              <h1 class="article-title">What is JSConf?</h1>
-                <p>JSConf has been the launch pad for many of the greatest things that we now take for granted on the web. This year will be no exception thanks to our famously unique call for speakers process designed to spotlight the new faces and ideas in the community. </p>
-            </article>
-
-            <article class="article">
-              <h1 class="article-title">How to get to JSConf last call</h1>
-              <p>For this final event, since it is smaller and more intimate, there will not be the normal airport transportation. Luckily, getting to the resort is easy, direct, and rather cost effective!</p>
-              <a href="http://lastcall.jsconf.us/getting-here.html">Getting here!</a>
-            </article>
-
-            <br>
-            <article class="sidebar">
-              <h1 class="article-title">Tickets</h1>
-                <p> Just Give Me Tickets!</p>
-                <ul>
-                  <li>Early Bird ($500)</li>
-                  <li>General Admission ($800)</li>
-                  <li>Late Bird ($1050)</li>
-                </ul>
-            </article>
-
-          </div>
+          <% include partials/content/maincontent.ejs %>
         </div>
         <aside class="col-sm-4">
-
-          <article class="sidebar">
-            <h1 class="sidebar-title">Sponsors</h1>
-            <p class="sidebar-body"> We do things a little different. There are no booths, no exhibit halls, and we encourage you to send your best technical talent. We focus sponsorships on creating amazing shared experiences.</p>
-            <div class="pixgrid clearfix">
-              <% if(artwork.length > 0) { %>
-              <%  for (i=0; i < artwork.length; i++) { %>
-                  <img src="/images/artwork/<%= artwork[i] %>" alt="Artwork">
-              <%  } %>
-              <% } %>
-            </div>
-          </article>
+          <% include partials/content/sponsors.ejs %>
         </aside>
       </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <% if(typeof artwork !== "undefined") { %>
-        <script src="/js/pixgrid.js"></script>
-    <% } %>
-
+    <% include partials/template/jsdefault.ejs %>
   </body>
 </html>
