@@ -10,6 +10,8 @@ app.set('views', 'app/views');
 
 //Variable will be availble in any views
 app.locals.siteTitle = "JS Conferences";
+app.locals.allSpeakers = dataFile.speakers;
+
 
 app.use(express.static('app/public'));
 app.use(require('./routes/index'));

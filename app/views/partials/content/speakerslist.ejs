@@ -7,7 +7,7 @@
           <h5 class="speakerslist-name">with <a href="/speakers/<%= item.name %>"><%= item.name %></a></h5>
           <p class="speakerslist-info"><a href="/speakers/<%= item.name %>">
             <img class="speakerslist-img img-circle pull-left" src="/images/speakers/<%= item.shortname %>.png" alt="Photo of <%= item.name %>"></a>
-            <%= item.summary %>
+            <p><%= item.summary %></p>
           </a></p>
         </div>
       <% }); %>

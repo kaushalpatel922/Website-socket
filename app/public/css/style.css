@@ -9,7 +9,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
-  color: #C1343F;
+  color: rgba(34, 75, 186, 0.91);
 }
 
 p {
@@ -25,7 +25,8 @@ li {
 
 
 a {
-  color: #DD4F53;
+  color: rgba(34, 75, 186, 0.91);
+  font-size: 18px;
 }
 
 /**  Header Navigation **/
@@ -47,7 +48,7 @@ header .jumbotron {
 /**  Navbar **/
 
 header .navbar {
-  background: #CF5565;
+  background: #4285f4;
   margin-bottom: 0;
   border-radius: 0;
   font-family: "Roboto", sans-serif;
