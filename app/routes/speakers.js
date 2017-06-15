@@ -15,21 +15,33 @@ router.get('/speakers', function(request, response) {
     pageTitle: 'Speakers',
     artwork: pagePhotos,
     speakers: pageSpeakers,
-    pageID: 'speakers'
+    pageID: 'speakerList'
   });
 });
 
 
 router.get('/speakers/:speakerid', function(request, response) {
-  var dataFile = request.app.get('appData');
-  var speaker = dataFile.speakers[request.params.speakerid];
-  response.send(`
-    <link rel="stylesheet" type="text/css" href="/css/style.css">
-    <h1>${speaker.title}</h1>
-    <h2>with ${speaker.name}</h2>
-    <img src="/images/speakers/${speaker.shortname}.png" alt="speaker">
-    <p>${speaker.summary}</p>
-  `);
+  var data = request.app.get('appData');
+  var pagePhotos = [];
+
+  var pageSpeakers = [];
+
+  data.speakers.forEach(function(item) {
+    if(item.name == request.params.speakerid) {
+      pageSpeakers.push(item);
+      data.sponsors.forEach(function(item) {
+          pagePhotos = pagePhotos.concat(item.artwork);
+        }
+      );
+    }
+  });
+
+  response.render('speakers', {
+    pageTitle: 'Speakers Info',
+    artwork: pagePhotos,
+    speakers: pageSpeakers,
+    pageID: 'speakerDetail'
+  });
 });
 
 module.exports = router;
