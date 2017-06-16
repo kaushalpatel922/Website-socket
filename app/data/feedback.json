@@ -1,12 +1,1 @@
-[
-  {
-    "name":"Bill",
-    "title":"Topic",
-    "message":"Would you consider covering React?"
-  },
-  {
-    "name":"Eric",
-    "title":"Great Speaker",
-    "message":"I really enjoyed Remy talking about JavaScript and JQuery."
-  }
-]
+[{"name":"Carl","title":"ES6","message":"I want to talk about ES6 soon."},{"name":"Bill","title":"Topic","message":"Would you consider covering React?"},{"name":"Eric","title":"Great Speaker","message":"I really enjoyed Remy talking about JavaScript and JQuery."}]
