@@ -17,9 +17,23 @@ router.post('/api', function(request, response) {
   feedbackData.unshift(request.body);
   fs.writeFile('app/data/feedback.json', JSON.stringify(feedbackData, 'utf8',
     function(err) {
-      console.log(err);
+      if(err) {
+        console.log(err);
+      }
     }
-  )); 
+  ));
+  response.json(feedbackData);
+});
+
+router.delete('/api/:id', function(request, response) {
+  feedbackData.splice(request.params.id, 1);
+  fs.writeFile('app/data/feedback.json', JSON.stringify(feedbackData, 'utf8',
+    function(err) {
+      if(err) {
+        console.log(err);
+      }
+    }
+  ));
   response.json(feedbackData);
 });
 
